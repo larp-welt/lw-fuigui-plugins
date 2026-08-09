@@ -1,0 +1,9 @@
+{
+  "name": "Taschenrechner",
+  "description": "Einfacher Taschenrechner mit Grundrechenarten, Quadrat und Wurzel.",
+  "version": "1.0.0",
+  "entry": "index.html",
+  "icon": "icon.png",
+  "layout": "default",
+  "files": ["index.html", "icon.png"]
+}

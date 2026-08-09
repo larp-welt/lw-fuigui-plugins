@@ -1,0 +1,9 @@
+{
+  "name": "RT0702C Speed Dial",
+  "description": "Zeigt die Zuordnung zwischen dem Drehzahl-Einstellrad der Makita RT0702C und der Motordrehzahl.",
+  "version": "1.0.0",
+  "entry": "index.html",
+  "icon": "icon.png",
+  "layout": "default",
+  "files": ["index.html", "icon.png"]
+}

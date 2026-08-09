@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>RT0702C Speed Dial</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:22px;background:var(--bg,#0c1018);color:var(--text-primary,#e2e6f4);font-family:ui-sans-serif,system-ui,sans-serif}
+h1{font-size:26px;font-weight:700;margin:0 0 6px}
+.subtitle{margin:0 0 18px;font-size:16px;opacity:.85}
+table{width:100%;border-collapse:collapse;background:var(--surface,#151b26);border:1px solid var(--border,#262f3f);border-radius:8px;overflow:hidden}
+th,td{padding:16px 18px;text-align:center;font-size:20px;border-bottom:1px solid var(--border,#262f3f)}
+th{background:var(--accent,#f0a030);color:var(--bg,#0c1018);font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.04em}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td{background:var(--elevated,#1b2331)}
+tbody tr{cursor:pointer;-webkit-tap-highlight-color:transparent}
+tbody tr.sel td{background:rgba(240,160,48,.3);background:color-mix(in srgb,var(--accent,#f0a030) 30%,transparent)}
+tbody tr.sel td.n{color:var(--accent,#f0a030)}
+td.n{font-weight:700;font-size:22px}
+</style>
+</head>
+<body>
+<h1>Makita RT0702C – Drehzahl-Einstellrad</h1>
+<p class="subtitle">Zahl am Rad ↔ ungefähre Motordrehzahl (min⁻¹)</p>
+<table>
+<thead><tr><th>Rad</th><th>Drehzahl</th></tr></thead>
+<tbody id="rows">
+<tr><td class="n">1</td><td>10.000</td></tr>
+<tr><td class="n">2</td><td>12.000</td></tr>
+<tr><td class="n">3</td><td>17.000</td></tr>
+<tr><td class="n">4</td><td>22.000</td></tr>
+<tr><td class="n">5</td><td>27.000</td></tr>
+<tr><td class="n">6</td><td>34.000</td></tr>
+</tbody>
+</table>
+<script>
+rows.addEventListener('click', e => {
+  const tr = e.target.closest('tr')
+  if (!tr) return
+  const was = tr.classList.contains('sel')
+  rows.querySelectorAll('.sel').forEach(r => r.classList.remove('sel'))
+  if (!was) tr.classList.add('sel')
+})
+</script>
+</body>
+</html>
